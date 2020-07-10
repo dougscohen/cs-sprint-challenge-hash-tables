@@ -7,6 +7,18 @@ def finder(files, queries):
     YOUR CODE HERE
     """
     # Your code here
+    
+    dictionary = {}
+    
+    for f in files:
+        f_type = f.split('/')[-1]
+        dictionary[f_type] = f
+        
+    result = []
+        
+    for query in queries:
+        if query in dictionary:
+            result.append(dictionary[query])
 
     return result
 
